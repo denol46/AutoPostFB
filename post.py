@@ -11,7 +11,7 @@ class warna:
 def post():
     print warna.hijau+"Input Token"
     token = raw_input(warna.oren+"---> "+warna.biru)
-    print warna.hijau+"ID Target"
+    print warna.hijau+"ID Group Target"
     target = input(warna.oren+"---> "+warna.biru)
     print warna.hijau+"Jumlah"
     jmlh = input(warna.oren+"---> "+warna.biru)
