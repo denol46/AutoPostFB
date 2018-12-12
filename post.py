@@ -20,11 +20,12 @@ def post():
     i = 0
     for i in range(0, jmlh):
         count = jmlh + 1
+        i += 1
         voss = 'https://graph.facebook.com/%s/feed?message=%s&access_token=%s'%(target, msg, token)
         prm = {'access_token' : token, 'message' : msg}
         gg = requests.post(voss, data = prm)
         try:
-            print warna.hijau+"Berhasil"
+            print warna.hijau+"Berhasil "+warna.biru+"["+warna.merah+str(i)+warna.biru+"]"
         except KeyError:
             print warna.merah+"Gagal"
 ##########################
