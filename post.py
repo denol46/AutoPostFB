@@ -8,6 +8,12 @@ class warna:
     oren = '\033[93m'
     merah = '\033[91m'
 
+def banner():
+    print warna.biru+"#" * 24
+    print warna.biru+"#" * 5+warna.hijau+" Auto Post FB "+warna.biru+"#" * 5
+    print warna.biru+"#" * 24
+    print ""
+
 def post():
     print warna.hijau+"Input Token"
     token = raw_input(warna.oren+"---> "+warna.biru)
@@ -29,4 +35,5 @@ def post():
         except KeyError:
             print warna.merah+"Gagal"
 ##########################
+banner()
 post()
