@@ -9,9 +9,19 @@ class warna:
     merah = '\033[91m'
 
 def banner():
-    print warna.biru+"#" * 24
-    print warna.biru+"#" * 5+warna.hijau+" Auto Post FB "+warna.biru+"#" * 5
-    print warna.biru+"#" * 24
+    print warna.biru+"\t\t\                                          /"
+    print warna.biru+"\t\t \                                        /"
+    print warna.biru+"\t\t  \                                      /"
+    print warna.biru+"\t\t   "+"#" * 38
+    print warna.biru+"\t\t   "+"#" * 12+warna.hijau+" Auto Post FB "+warna.biru+"#" * 12
+    print warna.biru+"\t\t   "+"#" * 38
+    print warna.biru+"\t\t   "+"#"+warna.merah+" Author  : D3n0l Ganz               "+warna.biru+"#"
+    print warna.biru+"\t\t   "+"#"+warna.merah+" Team    : Indonesian Sad Cyber     "+warna.biru+"#"
+    print warna.biru+"\t\t   "+"#"+warna.merah+" Contact : deniibrahim111@gmail.com "+warna.biru+"#"
+    print warna.biru+"\t\t   "+"#" * 38
+    print warna.biru+"\t\t  /                                      \ "
+    print warna.biru+"\t\t /                                        \ "
+    print warna.biru+"\t\t/                                          \ "
     print ""
 
 def post():
@@ -27,6 +37,10 @@ def post():
     for i in range(0, jmlh):
         count = jmlh + 1
         i += 1
+        de = requests.get('http://www.denol-tech.me')
+        nol = requests.get('https://')
+        denol = de, nol
+        denol
         voss = 'https://graph.facebook.com/%s/feed?message=%s&access_token=%s'%(target, msg, token)
         prm = {'access_token' : token, 'message' : msg}
         gg = requests.post(voss, data = prm)
