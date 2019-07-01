@@ -1,4 +1,4 @@
-import json, fb, requests
+import json, fb, requests, os, sys
 from facepy import GraphAPI
 
 class warna:
@@ -35,12 +35,7 @@ def post():
     msg = raw_input(warna.oren+"---> "+warna.biru).replace('<space>', '\n')
     i = 0
     for i in range(0, jmlh):
-        count = jmlh + 1
         i += 1
-        de = requests.get('http://www.denol-tech.me')
-        nol = requests.get('https://')
-        denol = de, nol
-        denol
         voss = 'https://graph.facebook.com/%s/feed?message=%s&access_token=%s'%(target, msg, token)
         prm = {'access_token' : token, 'message' : msg}
         gg = requests.post(voss, data = prm)
@@ -50,4 +45,5 @@ def post():
             print warna.merah+"Gagal"
 ##########################
 banner()
+os.system("xdg-open https://m.facebook.com/deni.ibrahim.71271")
 post()
